@@ -11,6 +11,7 @@ sudo apt-get install \
 cd
 wget https://github.com/vidulum/vidulum/releases/download/v2.0.2/VDL-Linux.zip
 unzip VDL-Linux.zip -d vidulum
+rm VDL-Linux.zip
 
 if [ -d ~/.vidulum-params ]; then
 echo "Params directory already exists"

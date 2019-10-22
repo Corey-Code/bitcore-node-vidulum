@@ -49,7 +49,7 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../vidulumd",
+        "exec": "../vidulum/vidulumd",
         "rpcqueue": 1000,
         "rpcport": 17676,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",

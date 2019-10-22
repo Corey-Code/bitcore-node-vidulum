@@ -114,8 +114,8 @@ Edit `bitcore-node.json` with something similar to:
   "services": [
     "bitcoind",
     "web",
-    "insight-api",
-    "insight-ui",
+    "insight-api-vidulum",
+    "insight-ui-vidulum",
     "<additional_service>"
   ],
   "servicesConfig": {

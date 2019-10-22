@@ -23,7 +23,7 @@ cd bitcore-node-vidulum
 npm install
 cd bin
 chmod +x bitcore-node
-cp ~/vidulumInsight/src/vidulumd ~/bitcore-node-vidulum/bin
+cp ~/vidulum/vidulumd ~/bitcore-node-vidulum/bin
 ./bitcore-node create mynode
 cd mynode
 
@@ -35,8 +35,8 @@ cat << EOF > bitcore-node.json
   "port": 3001,
   "services": [
     "bitcoind",
-    "insight-api",
-    "insight-ui",
+    "insight-api-vidulum",
+    "insight-ui-vidulum",
     "web"
   ],
   "messageLog": "",
@@ -49,14 +49,14 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../vidulum/vidulumd",
+        "exec": "../vidulumd",
         "rpcqueue": 1000,
         "rpcport": 17676,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",
         "zmqpubhashblock": "tcp://127.0.0.1:28332"
       }
     },
-    "insight-api": {
+    "insight-api-vidulum": {
         "routePrefix": "api",
                  "db": {
                    "host": "127.0.0.1",
@@ -67,7 +67,7 @@ cat << EOF > bitcore-node.json
           },
           "disableRateLimiter": true
     },
-    "insight-ui": {
+    "insight-ui-vidulum": {
         "apiPrefix": "api",
         "routePrefix": ""
     }

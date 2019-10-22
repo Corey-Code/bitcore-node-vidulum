@@ -9,7 +9,7 @@ var log = index.log;
 log.debug = function() {};
 
 var chai = require('chai');
-var bitcore = require('bitcore-lib-zelcash');
+var bitcore = require('bitcore-lib-vidulum');
 var rimraf = require('rimraf');
 var node;
 
@@ -53,7 +53,7 @@ describe('Node Functionality', function() {
             config: {
               spawn: {
                 datadir: datadir,
-                exec: path.resolve(__dirname, '../bin/zcashd')
+                exec: path.resolve(__dirname, '../bin/vidulumd')
               }
             }
           }

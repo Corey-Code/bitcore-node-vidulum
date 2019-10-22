@@ -16,14 +16,14 @@ sudo apt-get install -y mongodb-org
 sudo systemctl enable mongod
 sudo service mongod start
 
-#bitcore-node-zecmate
+#bitcore-node-vidulum
 cd
-git clone https://github.com/ZECmate/bitcore-node-zecmate
-cd bitcore-node-zecmate
+git clone https://github.com/Corey-Code/bitcore-node-vidulum
+cd bitcore-node-vidulum
 npm install
 cd bin
 chmod +x bitcore-node
-cp ~/zcashInsight/src/zcashd ~/bitcore-node-zecmate/bin
+cp ~/vidulumInsight/src/vidulumd ~/bitcore-node-vidulum/bin
 ./bitcore-node create mynode
 cd mynode
 
@@ -49,9 +49,9 @@ cat << EOF > bitcore-node.json
       "sendTxLog": "./data/pushtx.log",
       "spawn": {
         "datadir": "./data",
-        "exec": "../zcashd",
+        "exec": "../vidulumd",
         "rpcqueue": 1000,
-        "rpcport": 8232,
+        "rpcport": 17676,
         "zmqpubrawtx": "tcp://127.0.0.1:28332",
         "zmqpubhashblock": "tcp://127.0.0.1:28332"
       }
@@ -61,7 +61,7 @@ cat << EOF > bitcore-node.json
                  "db": {
                    "host": "127.0.0.1",
                    "port": "27017",
-                   "database": "zcash-api-livenet",
+                   "database": "vidulum-api-livenet",
                    "user": "",
                    "password": ""
           },
@@ -76,7 +76,7 @@ cat << EOF > bitcore-node.json
 EOF
 
 cd data
-cat << EOF > zcash.conf
+cat << EOF > vidulum.conf
 server=1
 whitelist=127.0.0.1
 txindex=1
@@ -85,10 +85,10 @@ timestampindex=1
 spentindex=1
 zmqpubrawtx=tcp://127.0.0.1:28332
 zmqpubhashblock=tcp://127.0.0.1:28332
-rpcport=8232
+rpcport=17676
 rpcallowip=127.0.0.1
-rpcuser=zcash
-rpcpassword=myzcashpassword
+rpcuser=vidulum
+rpcpassword=myvidulumpassword
 uacomment=bitcore
 mempoolexpiry=24
 rpcworkqueue=1100
@@ -97,18 +97,18 @@ dbcache=1000
 maxtxfee=1.0
 dbmaxfilesize=64
 showmetrics=0
-addnode=explorer.zecmate.com
-addnode=zcashnetwork.info
+addnode=explorer.vidulum.app
+addnode=explorer2.vidulum.app
 EOF
 
 cd ..
 cd node_modules
-git clone -b zcash https://github.com/ZECmate/insight-api
-git clone -b zcash https://github.com/ZECmate/insight-ui
-cd insight-api
+git clone https://github.com/Corey-Code/insight-api-vidulum
+git clone https://github.com/Corey-Code/insight-ui-vidulum
+cd insight-api-vidulum
 npm install
 cd ..
-cd insight-ui
+cd insight-ui-vidulum
 npm install
 cd ..
 cd ..

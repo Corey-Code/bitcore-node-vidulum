@@ -1,12 +1,12 @@
 {
-  "name": "bitcore-node-zecmate",
-  "description": "Full node with extended capabilities using Bitcore and Zcash",
+  "name": "bitcore-node-vidulum",
+  "description": "Full node with extended capabilities using Bitcore and Vidulum",
   "version": "3.2.0",
   "main": "./index.js",
-  "repository": "git://github.com/ZECmate/bitcore-node-zecmate.git",
-  "homepage": "https://zecmate.com",
+  "repository": "git://github.com/Corey-Code/bitcore-node-vidulum.git",
+  "homepage": "https://vidulum.app",
   "bugs": {
-    "url": "https://github.com/ZECmate/bitcore-node-zecmate/issues"
+    "url": "https://github.com/Corey-Code/bitcore-node-vidulum/issues"
   },
   "contributors": [
     {
@@ -43,6 +43,10 @@
     {
       "name": "Ian Munoz",
       "email": "ian.org@gmail.com"
+    },
+    {
+      "name": "Corey Miller",
+      "email": "corey@vidulum.org"
     }
   ],
   "bin": {
@@ -56,13 +60,13 @@
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- --recursive -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
   },
   "tags": [
-    "zcash",
-    "zcashd"
+    "vidulum",
+    "vidulumd"
   ],
   "dependencies": {
     "async": "^2.5.0",
-    "bitcoind-rpc": "git://github.com/TheTrunk/bitcoind-rpc#master",
-    "bitcore-lib-zelcash": "git://github.com/TheTrunk/bitcore-lib-zelcash#master",
+    "bitcoind-rpc": "git://github.com/Corey-Code/bitcoind-rpc#master",
+    "bitcore-lib-vidulum": "git://github.com/Corey-Code/bitcore-lib-vidulum#master",
     "body-parser": "^1.18.3",
     "colors": "^1.1.2",
     "commander": "^2.8.1",

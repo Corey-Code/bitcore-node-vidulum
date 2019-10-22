@@ -137,8 +137,8 @@ Setup symlinks for all of the services and dependencies:
 cd node_modules
 ln -s ~/bitcore-lib
 ln -s ~/bitcore-node
-ln -s ~/insight-api
-ln -s ~/insight-ui
+ln -s ~/insight-api-vidulum
+ln -s ~/insight-ui-vidulum
 ```
 
 Make sure that the `<datadir>/bitcoin.conf` has the necessary settings, for example:
